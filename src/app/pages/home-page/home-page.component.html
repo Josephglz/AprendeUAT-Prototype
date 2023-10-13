@@ -1,12 +1,67 @@
-<c-carousel [interval]="5000" transition="slide">
-  <c-carousel-inner>
-    <c-carousel-item *ngFor="let slide of slides">
-      <img
-        [src]="slide.src"
-        alt="{{slide.title}}"
-        class="d-block w-full"
-        loading="lazy"
-      />
-    </c-carousel-item>
-  </c-carousel-inner>
-</c-carousel>
+<div class="bg-slate-200 h-1"></div>
+<app-carousel-component [height]="96"></app-carousel-component>
+<div class="bg-slate-200 h-1"></div>
+<section id="searchLearnObjects" class="w-full p-3 bg-Primary-Orange">
+  <h2 class="w-full font-semibold text-xl text-center text-white">Buscar objetos de aprendizaje</h2>
+  <div class="flex justify-center mt-3">
+    <input
+      type="text"
+      id="learnObjects"
+      class="w-full md:w-1/2 p-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Cursos, talleres, documentos" required
+    >
+  </div>
+
+  <div class="flex justify-center mt-3">
+    <button class="w-1/2 md:w-1/3 p-2 bg-Primary-Blue text-white rounded-lg">Buscar</button>
+  </div>
+</section>
+
+<div class="flex flex-col md:flex-row items-center bg-slate-200">
+  <section id="recentPosts" class="w-full p-3 overflow-auto md:h-64 h-[250px]">
+    <div class="bg-white rounded-md">
+      <div class="w-full flex items-center justify-center space-x-3 p-2 bg-Primary-Blue">
+        <i class="fa-solid fa-clock text-white text-xl"></i>
+        <h2 class="font-semibold text-2xl text-white">
+          Materiales recientes
+        </h2>
+      </div>
+
+      <div class="pt-1 pb-1 pl-2 pr-2 border-b-2">
+        <p class="font-semibold select-none cursor-pointer" (click)="toggleCollapse(0)">Ingeniería en sistemas</p>
+        <div
+          [ngClass]="{'hidden': !isCollapsed[0]}"
+          class="ml-4 text-slate-600">
+          <p><i class="fa-solid fa-link text-xs"></i> Instalación de NodeJS</p>
+          <p><i class="fa-solid fa-link text-xs"></i> Instalación de Angular</p>
+          <p><i class="fa-solid fa-link text-xs"></i> Fundamentos de Programación</p>
+        </div>
+      </div>
+
+      <div class="pt-1 pb-1 pl-2 pr-2 border-b-2">
+        <p class="font-semibold select-none cursor-pointer" (click)="toggleCollapse(1)">Ingeniería civil</p>
+        <div
+          [ngClass]="{'hidden': !isCollapsed[1]}"
+          class="ml-4 text-slate-600">
+          <p><i class="fa-solid fa-link text-xs"></i> Fundamentos de ingeniería</p>
+          <p><i class="fa-solid fa-link text-xs"></i> Material didactico civil</p>
+        </div>
+      </div>
+
+      <div class="pt-1 pb-1 pl-2 pr-2 border-b-2">
+        <p class="font-semibold select-none cursor-pointer" (click)="toggleCollapse(2)">Ingeniería Geomatica</p>
+        <div
+          [ngClass]="{'hidden': !isCollapsed[2]}"
+          class="ml-4 text-slate-600">
+          <p><i class="fa-solid fa-link text-xs"></i> Fundamentos de Geomatica</p>
+          <p><i class="fa-solid fa-link text-xs"></i> Otros materiales y recursos</p>
+          <p><i class="fa-solid fa-link text-xs"></i> Video Explicación de: Tema 1</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="News" class="md:block w-full md:w-10/12 p-3">
+    <app-carousel-component [height]="64"></app-carousel-component>
+  </section>
+</div>
