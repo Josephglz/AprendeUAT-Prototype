@@ -4,20 +4,13 @@ import { Component } from '@angular/core';
   templateUrl: './home-page.component.html'
 })
 export class HomePageComponent {
-  slides: any[] = new Array(3).fill({id: -1, src: '', title: '', subtitle: ''});
 
-  constructor() {}
+  isCollapsed: boolean[] = [true, false, false, false];
 
-  ngOnInit(): void {
-    this.slides[0] = {
-      src: '/assets/images/banners/banneruno.png',
-    };
-    this.slides[1] = {
-      src: '/assets/images/banners/bannerdos.jpg',
-    }
-    this.slides[2] = {
-      src: '/assets/images/banners/bannertres.png',
-    }
+  constructor() { }
+
+  toggleCollapse(idx: number): void {
+    this.isCollapsed = this.isCollapsed.map(v => false);
+    this.isCollapsed[idx] = !this.isCollapsed[idx];
   }
-
 }
