@@ -167,16 +167,12 @@
             </button>
           </span>
         </div>
-        <p class="mt-2">7 resultados</p>
+        <p class="mt-2">{{tutorialsList.length}} resultados</p>
         <div class="flex flex-col md:grid md:grid-cols-4 gap-x-2 gap-y-2 mt-2">
-          <app-tutorial-card></app-tutorial-card>
-          <app-tutorial-card></app-tutorial-card>
-          <app-tutorial-card></app-tutorial-card>
-          <app-tutorial-card></app-tutorial-card>
-          <app-tutorial-card></app-tutorial-card>
-          <app-tutorial-card></app-tutorial-card>
-          <app-tutorial-card></app-tutorial-card>
-
+          <app-tutorial-card
+            *ngFor="let tutorial of tutorialsList"
+            [TutorialInfo]="tutorial"
+            ></app-tutorial-card>
         </div>
       </div>
     </div>
