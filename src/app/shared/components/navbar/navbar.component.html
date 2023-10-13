@@ -2,9 +2,8 @@
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a routerLink="/" class="flex items-center">
         <img src="/assets/images/UAT_logo.png" class="h-8 mr-3" alt="UAT Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Aprende UAT</span>
     </a>
-    <button (click)="toggleMenu()" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden bg-Secondary-LightBlue focus:outline-none focus:ring-2 focus:ring-gray-200">
+    <button (click)="toggleMenu()" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden bg-Secondary-Blue focus:outline-none focus:ring-2 focus:ring-gray-200">
         <span class="sr-only">Abrir menú principal</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -26,7 +25,7 @@
           <a
             (click)="setIdxSection(1)"
             [ngClass]="{'bg-Secondary-LightBlue text-white': idxSection==1,
-            'md:text-Secondary-LightBlue': idxSection == 1}"
+                        'md:text-Secondary-LightBlue': idxSection == 1}"
             routerLink="/"
             class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:text-Primary-Black md:p-0 md:hover:text-Secondary-Cyan">Tutorias</a>
         </li>
@@ -34,7 +33,7 @@
           <a
             (click)="setIdxSection(2)"
             [ngClass]="{'bg-Secondary-LightBlue text-white': idxSection==2,
-            'md:text-Secondary-LightBlue': idxSection == 2}"
+                        'md:text-Secondary-LightBlue': idxSection == 2}"
             routerLink="/"
             class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:text-Primary-Black md:p-0 md:hover:text-Secondary-Cyan">Talleres</a>
         </li>
@@ -42,10 +41,25 @@
           <a
             (click)="setIdxSection(3)"
             [ngClass]="{'bg-Secondary-LightBlue text-white': idxSection==3,
-            'md:text-Secondary-LightBlue': idxSection == 3}"
+                        'md:text-Secondary-LightBlue': idxSection == 3}"
             routerLink="/"
             class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:text-Primary-Black md:p-0 md:hover:text-Secondary-Cyan">Asesores</a>
         </li>
+
+        <li>
+          <a
+            (click)="setIdxSection(4)"
+            [ngClass]="{'bg-Secondary-LightBlue text-white': idxSection==4,
+                        'md:text-Secondary-LightBlue': idxSection == 4}"
+            routerLink="/"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:text-Primary-Black md:p-0 md:hover:text-Secondary-Cyan">
+              <div class="flex items-center ">
+                <i class="fa-solid fa-user hidden md:block"></i>
+                <p class="md:hidden">Iniciar sesión</p>
+              </div>
+          </a>
+        </li>
+
       </ul>
     </div>
   </div>
