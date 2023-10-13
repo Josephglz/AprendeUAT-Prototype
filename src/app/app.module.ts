@@ -6,7 +6,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 
-import { CarouselModule } from '@coreui/angular';
+import {
+  CarouselModule,
+  CollapseModule,
+  CardModule,
+} from '@coreui/angular';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -25,6 +29,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     NoopAnimationsModule,
 
     CarouselModule,
+    CollapseModule,
 
     SharedModule,
   ],
