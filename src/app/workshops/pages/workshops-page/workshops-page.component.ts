@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: './tutorials-page.component.html'
+  selector: 'app-workshops-page',
+  templateUrl: './workshops-page.component.html'
 })
-export class TutorialsPageComponent {
+export class WorkshopsPageComponent {
   filterCollapse: boolean = false;
   filterCareers: boolean = true;
   filterSubjects: boolean = true;

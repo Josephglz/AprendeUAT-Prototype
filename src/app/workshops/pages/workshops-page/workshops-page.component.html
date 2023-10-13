@@ -1,6 +1,6 @@
 <div class="w-full h-full font-Poppins p-5">
-  <h2 class="text-3xl font-semibold">Buscar Tutorias</h2>
-  <p class="text-sm text-slate-500">Utiliza esta herramienta para buscar las tutorias que resuelvan tus dudas.</p>
+  <h2 class="text-3xl font-semibold">Buscar Talleres</h2>
+  <p class="text-sm text-slate-500">Utiliza esta herramienta para buscar los talleres que resuelvan tus dudas.</p>
 
   <div class="mt-5 flex flex-col md:flex-row bg-gray-200">
     <div
@@ -81,6 +81,38 @@
           </div>
         </div>
 
+        <div
+          (click)="toggleFilterCareers()"
+          class="flex items-center justify-between">
+          <p class="text-lg font-medium select-none mt-3">Tópicos</p>
+          <i [ngClass]="{'hidden': !filterCareers}" class="fa-solid fa-caret-up text-slate-600"></i>
+          <i [ngClass]="{'hidden': filterCareers}" class="fa-solid fa-caret-down text-slate-600"></i>
+        </div>
+        <div
+          [ngClass]="{'hidden': !filterCareers}"
+          class="flex flex-col justify-start">
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="ISC" id="ISC">
+            <label for="ISC">Instalación Angular</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IC" id="IC">
+            <label for="IC">Diseño web</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IIS" id="IIS">
+            <label for="IIS">Diseño UI/UX</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IN" id="IN">
+            <label for="IN">Configuración de base de datos</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IN" id="IN">
+            <label for="IN">Manejo de información SQL</label>
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="bg-slate-100 md:w-full p-3">
@@ -129,15 +161,15 @@
           </span>
         </div>
         <p class="mt-2">1 resultados</p>
-        <div class="flex flex-col md:grid md:grid-cols-4 gap-x-2 gap-y-2">
-          <app-tutorials-card></app-tutorials-card>
-          <app-tutorials-card></app-tutorials-card>
-          <app-tutorials-card></app-tutorials-card>
-          <app-tutorials-card></app-tutorials-card>
-          <app-tutorials-card></app-tutorials-card>
-          <app-tutorials-card></app-tutorials-card>
-          <app-tutorials-card></app-tutorials-card>
-          <app-tutorials-card></app-tutorials-card>
+        <div class="flex flex-col md:grid md:grid-cols-4 gap-x-2 gap-y-2 mt-2">
+          <app-workshops-card></app-workshops-card>
+          <app-workshops-card></app-workshops-card>
+          <app-workshops-card></app-workshops-card>
+          <app-workshops-card></app-workshops-card>
+          <app-workshops-card></app-workshops-card>
+          <app-workshops-card></app-workshops-card>
+          <app-workshops-card></app-workshops-card>
+          <app-workshops-card></app-workshops-card>
         </div>
       </div>
     </div>
