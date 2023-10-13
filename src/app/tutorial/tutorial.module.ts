@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TutorialsPageComponent } from './pages/tutorials-page/tutorials-page.component';
 import { TutorialCardComponent } from './components/tutorial-card/tutorial-card.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,7 +13,8 @@ import { TutorialCardComponent } from './components/tutorial-card/tutorial-card.
     TutorialCardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     TutorialsPageComponent
