@@ -3,18 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { TutorialsPageComponent } from './pages/tutorials-page/tutorials-page.component';
 import { TutorialCardComponent } from './components/tutorial-card/tutorial-card.component';
+import { FormComponent } from './components/form/form.component';
+
 import { RouterModule } from '@angular/router';
 
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     TutorialsPageComponent,
-    TutorialCardComponent
+    TutorialCardComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+
+    MatDialogModule,
   ],
   exports: [
     TutorialsPageComponent
