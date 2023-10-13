@@ -18,6 +18,7 @@ module.exports = {
         'Secondary-Cyan': '#81C6CC',
         'Secondary-Orange': '#ECB06F',
         'Secondary-LightOrange': '#F7C46E',
+        'Secondary-Turquoise': '#376986'
       }
     },
   },
