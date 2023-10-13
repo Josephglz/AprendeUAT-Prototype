@@ -7,11 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { CarouselModule } from '@coreui/angular';
 
 import { SharedModule } from './shared/shared.module';
-import { TutorialsModule } from './tutorials/tutorials.module';
+import { WorkshopsModule } from './workshops/workshops.module';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { TutorialModule } from './tutorial/tutorial.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     CarouselModule,
 
     SharedModule,
-    TutorialsModule,
+    WorkshopsModule,
+    TutorialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

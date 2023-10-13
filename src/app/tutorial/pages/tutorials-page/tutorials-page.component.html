@@ -1,0 +1,185 @@
+<div class="w-full h-full font-Poppins p-5">
+  <div class="flex flex-row items-center justify-between">
+    <div class="flex flex-col">
+      <h2 class="text-3xl font-semibold">Buscar Tutorias</h2>
+      <p class="text-sm text-slate-500">Utiliza esta herramienta para buscar las tutorias que resuelvan tus dudas.</p>
+    </div>
+    <button class="flex justify-center items-center w-1/6 md:w-1/5 p-1 h-10 bg-Secondary-Orange text-white text-sm rounded-lg hover:bg-Primary-Orange">
+      <span class="hidden md:block">Solicitar tutoria</span>
+      <i class="md:hidden fa-solid fa-plus text-white text-xl"></i>
+    </button>
+  </div>
+  <div class="mt-5 flex flex-col md:flex-row bg-gray-200">
+    <div
+      [ngClass]="{'max-h-96': filterCollapse, 'h-auto': !filterCollapse}"
+      class="w-full md:w-1/4 p-3 overflow-auto">
+      <div
+      (click)="toggleFilterCollapse()"
+      class="flex items-center justify-between">
+        <p class="text-xl font-medium">Filtro</p>
+        <i [ngClass]="{'hidden': !filterCollapse}" class="fa-solid fa-caret-up text-slate-600"></i>
+        <i [ngClass]="{'hidden': filterCollapse}" class="fa-solid fa-caret-down text-slate-600"></i>
+      </div>
+      <hr class="h-[2px] bg-slate-700 rounded-full">
+
+      <div
+        [ngClass]="{'hidden': !filterCollapse}"
+        class="md:block mt-3">
+        <input
+          type="text"
+          id="searchTutorials"
+          class="mb-2 w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Filtrar temas"
+          required>
+
+        <div
+          (click)="toggleFilterCareers()"
+          class="flex items-center justify-between">
+          <p class="text-lg font-medium select-none">Carreras</p>
+          <i [ngClass]="{'hidden': !filterCareers}" class="fa-solid fa-caret-up text-slate-600"></i>
+          <i [ngClass]="{'hidden': filterCareers}" class="fa-solid fa-caret-down text-slate-600"></i>
+        </div>
+        <div
+          [ngClass]="{'hidden': !filterCareers}"
+          class="flex flex-col justify-start">
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="ISC" id="ISC">
+            <label for="ISC">Ingeniería en Sistemas Computacionales</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IC" id="IC">
+            <label for="IC">Ingeniería Civil</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IIS" id="IIS">
+            <label for="IIS">Ingeniería Industrial y de Sistemas</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IN" id="IN">
+            <label for="IN">Ingeniería en Negocios</label>
+          </div>
+        </div>
+
+        <div
+          (click)="toggleFilterSubjects()"
+          class="flex items-center justify-between mt-3">
+          <p class="text-lg font-medium select-none">Asignaturas</p>
+          <i [ngClass]="{'hidden': !filterSubjects}" class="fa-solid fa-caret-up text-slate-600"></i>
+          <i [ngClass]="{'hidden': filterSubjects}" class="fa-solid fa-caret-down text-slate-600"></i>
+        </div>
+        <div
+          [ngClass]="{'hidden': !filterSubjects}"
+          class="flex flex-col justify-start">
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="ISC" id="ISC">
+            <label for="ISC">Fundamentos de Programación</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IC" id="IC">
+            <label for="IC">Programación Orientada a Objetos</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IIS" id="IIS">
+            <label for="IIS">Algebra Lineal</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IN" id="IN">
+            <label for="IN">Métodos de investigación</label>
+          </div>
+        </div>
+
+        <div
+          (click)="toggleFilterCareers()"
+          class="flex items-center justify-between">
+          <p class="text-lg font-medium select-none mt-3">Tópicos</p>
+          <i [ngClass]="{'hidden': !filterCareers}" class="fa-solid fa-caret-up text-slate-600"></i>
+          <i [ngClass]="{'hidden': filterCareers}" class="fa-solid fa-caret-down text-slate-600"></i>
+        </div>
+        <div
+          [ngClass]="{'hidden': !filterCareers}"
+          class="flex flex-col justify-start">
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="ISC" id="ISC">
+            <label for="ISC">Instalación Angular</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IC" id="IC">
+            <label for="IC">Diseño web</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IIS" id="IIS">
+            <label for="IIS">Diseño UI/UX</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IN" id="IN">
+            <label for="IN">Configuración de base de datos</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IN" id="IN">
+            <label for="IN">Manejo de información SQL</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="bg-slate-100 md:w-full p-3">
+      <div class="flex flex-col">
+        <div class="flex flex-row space-x-3">
+            <input
+            type="text"
+            id="searchTutorials"
+            class="mb-2 w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500"
+            placeholder="Buscar contenido"
+            required>
+          <button class="w-1/6 md:w-1/5 p-1 h-10 bg-Secondary-Blue text-white text-sm rounded-lg hover:bg-Primary-Blue">
+            Buscar
+          </button>
+        </div>
+        <div class="flex flex-row space-x-2">
+
+          <span id="badge-dismiss-default" class="inline-flex items-center px-2 py-[2px] md:py-1 text-sm font-medium text-white bg-Secondary-LightBlue rounded">
+            ISC
+            <button type="button" class="inline-flex items-center p-1 ml-2 text-sm text-white bg-transparent rounded-sm hover:bg-blue-200 hover:text-blue-900">
+              <svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+              <span class="sr-only">Eliminar etiqueta</span>
+            </button>
+          </span>
+
+          <span id="badge-dismiss-default" class="inline-flex items-center px-2 py-[2px] md:py-1 text-sm font-medium text-white bg-Secondary-LightBlue rounded">
+            Fundamentos de P...
+            <button type="button" class="inline-flex items-center p-1 ml-2 text-sm text-white bg-transparent rounded-sm hover:bg-blue-200 hover:text-blue-900">
+              <svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+              <span class="sr-only">Eliminar etiqueta</span>
+            </button>
+          </span>
+
+          <span id="badge-dismiss-default" class="inline-flex items-center px-2 py-[2px] md:py-1 text-sm font-medium text-white bg-Secondary-LightBlue rounded">
+            Java
+            <button type="button" class="inline-flex items-center p-1 ml-2 text-sm text-white bg-transparent rounded-sm hover:bg-blue-200 hover:text-blue-900">
+              <svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg>
+              <span class="sr-only">Eliminar etiqueta</span>
+            </button>
+          </span>
+        </div>
+        <p class="mt-2">7 resultados</p>
+        <div class="flex flex-col md:grid md:grid-cols-4 gap-x-2 gap-y-2 mt-2">
+          <app-tutorial-card></app-tutorial-card>
+          <app-tutorial-card></app-tutorial-card>
+          <app-tutorial-card></app-tutorial-card>
+          <app-tutorial-card></app-tutorial-card>
+          <app-tutorial-card></app-tutorial-card>
+          <app-tutorial-card></app-tutorial-card>
+          <app-tutorial-card></app-tutorial-card>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
