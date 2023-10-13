@@ -1,1 +1,91 @@
-<p>tutorials-page works!</p>
+<div class="w-full h-full font-Poppins p-5">
+  <h2 class="text-3xl font-semibold">Buscar Tutorias</h2>
+  <p class="text-sm text-slate-500">Utiliza esta herramienta para buscar las tutorias que resuelvan tus dudas.</p>
+
+  <div class="flex flex-col md:flex-row bg-gray-200">
+    <div
+      [ngClass]="{'max-h-96': filterCollapse, 'h-auto': !filterCollapse}"
+      class="w-full md:w-1/4 p-3 overflow-auto">
+      <div
+      (click)="toggleFilterCollapse()"
+      class="flex items-center justify-between">
+        <p class="text-xl font-medium">Filtro</p>
+        <i [ngClass]="{'hidden': !filterCollapse}" class="fa-solid fa-caret-up text-slate-600"></i>
+        <i [ngClass]="{'hidden': filterCollapse}" class="fa-solid fa-caret-down text-slate-600"></i>
+      </div>
+      <hr class="h-[2px] bg-slate-700 rounded-full">
+
+      <div
+        [ngClass]="{'hidden': !filterCollapse}"
+        class="md:block mt-3">
+        <input
+          type="text"
+          id="searchTutorials"
+          class="mb-2 w-full p-2.5 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Filtrar temas"
+          required>
+
+        <div
+          (click)="toggleFilterCareers()"
+          class="flex items-center justify-between">
+          <p class="text-lg font-medium select-none">Carreras</p>
+          <i [ngClass]="{'hidden': !filterCareers}" class="fa-solid fa-caret-up text-slate-600"></i>
+          <i [ngClass]="{'hidden': filterCareers}" class="fa-solid fa-caret-down text-slate-600"></i>
+        </div>
+        <div
+          [ngClass]="{'hidden': !filterCareers}"
+          class="flex flex-col justify-start">
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="ISC" id="ISC">
+            <label for="ISC">Ingeniería en Sistemas Computacionales</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IC" id="IC">
+            <label for="IC">Ingeniería Civil</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IIS" id="IIS">
+            <label for="IIS">Ingeniería Industrial y de Sistemas</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IN" id="IN">
+            <label for="IN">Ingeniería en Negocios</label>
+          </div>
+        </div>
+
+        <div
+          (click)="toggleFilterSubjects()"
+          class="flex items-center justify-between mt-3">
+          <p class="text-lg font-medium select-none">Asignaturas</p>
+          <i [ngClass]="{'hidden': !filterSubjects}" class="fa-solid fa-caret-up text-slate-600"></i>
+          <i [ngClass]="{'hidden': filterSubjects}" class="fa-solid fa-caret-down text-slate-600"></i>
+        </div>
+        <div
+          [ngClass]="{'hidden': !filterSubjects}"
+          class="flex flex-col justify-start">
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="ISC" id="ISC">
+            <label for="ISC">Fundamentos de Programación</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IC" id="IC">
+            <label for="IC">Programación Orientada a Objetos</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IIS" id="IIS">
+            <label for="IIS">Algebra Lineal</label>
+          </div>
+          <div class="text-sm truncate items-center flex space-x-2">
+            <input type="checkbox" name="IN" id="IN">
+            <label for="IN">Métodos de investigación</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="md:w-full p-3">
+      <p>Lado derecho</p>
+    </div>
+  </div>
+
+</div>
