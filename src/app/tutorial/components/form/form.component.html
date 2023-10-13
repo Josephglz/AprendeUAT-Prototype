@@ -1,0 +1,57 @@
+  <h2 mat-dialog-title class="text-slate-800">Solicitar nueva tutoría</h2>
+  <div mat-dialog-content>
+    <form class="flex flex-col space-y-3">
+
+      <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3">
+        <div class="w-full">
+          <label for="email" class="block mb-1 text-sm text-slate-700">Correo electrónico</label>
+          <input type="email" id="email" autocomplete="off" placeholder="correo@correo.com" required class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+        </div>
+        <div class="w-full">
+          <label for="name" class="block mb-1 text-sm text-slate-700">Nombre completo</label>
+          <input type="text" id="name" autocomplete="off" placeholder="Apellido paterno, Apellido materno, Nombre(s)" required class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3">
+        <div class="w-full">
+          <label for="subjects" class="block mb-1 text-sm text-slate-700">Select an option</label>
+          <select id="subjects" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+            <option selected disabled>Seleccione su materia</option>
+            <option value="FP">Fundamentos de Programación</option>
+            <option value="POO">Programación Orientada a Objetos</option>
+            <option value="PA">Programación Avanzada</option>
+            <option value="DERV">Entorno de desarrollos de realidad virtual</option>
+          </select>
+        </div>
+        <div class="w-full">
+          <label for="topic" class="block mb-1 text-sm text-slate-700">Tema</label>
+          <input type="text" id="topic" autocomplete="off" placeholder="Tema a solicitar" required class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3">
+        <div class="w-full">
+          <label for="email" class="block mb-1 text-sm text-slate-700">Descripción</label>
+          <textarea rows="5" autocomplete="off" placeholder="Descripción del problema" required class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"></textarea>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <div mat-dialog-actions>
+    <div class="w-full flex flex-row justify-end">
+      <button
+        title="Cancelar"
+        (click)="closeDialog()"
+        class="mr-4 border-2 border-red-400 h-10 p-4 rounded-md drop-shadow-lg flex justify-center items-center text-red-400 text-sm hover:animate-pulse">
+          Cancelar
+      </button>
+      <button
+        title="Crear"
+        (click)="closeDialog()"
+        class="mr-4 border-2 bg-Primary-Blue h-10 p-4 rounded-md drop-shadow-lg flex justify-center items-center text-white text-sm hover:animate-pulse">
+          Solicitar
+      </button>
+    </div>
+  </div>
