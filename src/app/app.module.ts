@@ -8,8 +8,6 @@ import { SharedModule } from './shared/shared.module';
 
 import {
   CarouselModule,
-  CollapseModule,
-  CardModule,
 } from '@coreui/angular';
 
 import { AppComponent } from './app.component';
@@ -29,7 +27,6 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     NoopAnimationsModule,
 
     CarouselModule,
-    CollapseModule,
 
     SharedModule,
   ],
