@@ -10,11 +10,13 @@ import { CarouselModule } from '@coreui/angular';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
