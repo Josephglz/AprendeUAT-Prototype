@@ -14,13 +14,13 @@ export class WorkshopsService {
       resourcesLinks: [
         {
           title: '001 ChatBOT Presentación',
-          path: 'assets/videos/workshops/1/001.-ChatBotPresentacion.mp4',
+          path: 'https://www.youtube.com/embed/CYtU-ebJFtM?si=VuRUjgn-7yBusTIa',
           author: 'Coordinación de la carrera de Ingeniería en sistemas computacionales',
           type: 'Video'
         },
         {
           title: '002 ChatBOT Crear cuenta',
-          path: 'assets/videos/workshops/1/002.-CrearCuentaChatGPT.mp4',
+          path: 'https://www.youtube.com/embed/c1f42BsA9xk?si=U0Au2rqf5zK2NgSk',
           author: 'Coordinación de la carrera de Ingeniería en sistemas computacionales',
           type: 'Video'
         }
