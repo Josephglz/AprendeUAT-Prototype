@@ -8,12 +8,14 @@ import { FormComponent } from './components/form/form.component';
 import { RouterModule } from '@angular/router';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { TutorialsDetailsComponent } from './pages/tutorials-details/tutorials-details.component';
 
 @NgModule({
   declarations: [
     TutorialsPageComponent,
     TutorialCardComponent,
-    FormComponent
+    FormComponent,
+    TutorialsDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDialogModule,
   ],
   exports: [
-    TutorialsPageComponent
+    TutorialsPageComponent,
+    TutorialsDetailsComponent,
   ]
 })
 export class TutorialModule { }
