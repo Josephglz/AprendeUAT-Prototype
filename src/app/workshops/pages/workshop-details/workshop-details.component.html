@@ -18,10 +18,8 @@
   </div>
   <div class="flex flex-col md:w-1/2">
     <div id="Resource">
-      <video class="w-full" controls>
-        <source [src]="currentVideoSource" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <iframe class="w-full h-96" [src]="currentVideoSource" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
     </div>
     <div id="copyright" class="bg-Primary-Orange flex flex-row items-center space-x-2 p-2">
       <i class="fa-solid fa-user-tie text-white text-sm"></i>
