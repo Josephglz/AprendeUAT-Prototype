@@ -1,0 +1,31 @@
+<div class="flex flex-col md:flex-row md:justify-center md:space-x-10 bg-slate-200 p-2">
+  <div class="flex flex-col mt-3 mb-3 bg-white">
+    <div (click)="toggleCollapseVideos()" class="w-[398px] bg-Primary-Orange truncate pl-2 pr-2">
+      <h2 class="font-semibold text-2xl text-white truncate">
+        {{workshopInfo.title}}
+      </h2>
+    </div>
+    <p class="pl-2 pr-2">{{workshopInfo.description}}</p>
+    <hr class="h-[2px] bg-slate-300 mt-1 mb-1 mr-5 ml-5 rounded-full">
+    <div
+      [ngClass]="{'hidden': !collapseVideos}"
+      class="flex flex-col pl-2 pr-2">
+      <p class="hover:cursor-pointer"
+        (click)="changeResourceIndex(i)" *ngFor="let source of workshopInfo.resourcesLinks; let i = index">
+        <i class="fa-solid fa-circle-play text-xs"></i> {{source.title}}
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-col md:w-1/2">
+    <div id="Resource">
+      <video class="w-full" controls>
+        <source [src]="currentVideoSource" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div id="copyright" class="bg-Primary-Orange flex flex-row items-center space-x-2 p-2">
+      <i class="fa-solid fa-user-tie text-white text-sm"></i>
+      <p class="text-white text-sm line-clamp-1" title="{{workshopInfo.resourcesLinks[idResource].author}}">{{workshopInfo.resourcesLinks[idResource].author}}</p>
+    </div>
+  </div>
+</div>
