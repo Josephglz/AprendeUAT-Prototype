@@ -1,4 +1,5 @@
 export interface Workshops {
+  id: number;
   title: string;
   description: string;
   resourcesLinks: WorkshopsResources[];

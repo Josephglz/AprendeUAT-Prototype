@@ -5,11 +5,13 @@ import { WorkshopsPageComponent } from './pages/workshops-page/workshops-page.co
 import { WorkshopCardComponent } from './components/workshops-card/workshop-card.component';
 
 import { RouterModule } from '@angular/router';
+import { WorkshopDetailsComponent } from './pages/workshop-details/workshop-details.component';
 
 @NgModule({
   declarations: [
     WorkshopsPageComponent,
-    WorkshopCardComponent
+    WorkshopCardComponent,
+    WorkshopDetailsComponent
   ],
   imports: [
     CommonModule,
