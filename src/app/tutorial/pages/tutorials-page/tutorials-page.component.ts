@@ -4,6 +4,7 @@ import { Tutorials } from 'src/app/shared/interfaces/Tutorials';
 
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { FormComponent } from '../../components/form/form.component';
+import { TutorialsService } from '../../services/tutorials.service';
 
 @Component({
   templateUrl: './tutorials-page.component.html'
@@ -13,8 +14,11 @@ export class TutorialsPageComponent {
   filterCareers: boolean = true;
   filterSubjects: boolean = true;
 
+  tutorialsList: Tutorials[] = this._tutorialService.getTutorialsList();
+
   constructor(
-    public dialogRef: MatDialog
+    public dialogRef: MatDialog,
+    private _tutorialService: TutorialsService
   ) {}
 
   toggleFilterCollapse() {
@@ -37,43 +41,4 @@ export class TutorialsPageComponent {
     dialogRef.afterClosed().subscribe(result => {
     })
   }
-
-  tutorialsList:Tutorials[] = [
-    {
-      author: 'Gonzalez Cabrales Joseph Ian',
-      title: '¿Qué son las sentencias condicionales?',
-      description: '¿Qué es una sentencia? ¿Qué es una condicional? ¿Qué es una sentencia condicional?',
-      sinceTime: 3,
-      tags: [
-        {
-          name: 'Programación'
-        },
-        {
-          name: 'Conceptos básicos'
-        },
-        {
-          name: 'Aprender a programar'
-        }
-      ],
-      answers: 3
-    },
-    {
-      author: 'Hernandez García Carlos de Jesus',
-      title: '¿Cómo instalo PSEINT?',
-      description: '¿Cómo puedo instalar PSEINT en mi computadora?',
-      sinceTime: 2,
-      tags: [
-        {
-          name: 'PSEINT'
-        },
-        {
-          name: 'Instalación'
-        },
-        {
-          name: 'Algoritmos'
-        }
-      ],
-      answers: 1
-    }
-  ]
 }

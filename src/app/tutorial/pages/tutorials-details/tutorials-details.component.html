@@ -1,0 +1,46 @@
+<div class="w-full flex flex-col items-center space-y-2 pt-3 pb-3 bg-slate-200">
+  <div class="w-11/12 bg-white p-2 rounded-md">
+    <div class="flex flex-row items-center space-x-3">
+      <i class="fa-solid fa-user p-4 bg-white text-Primary-Blue border-2 border-black rounded-full"></i>
+      <div class="flex flex-col">
+        <p class="text-base font-medium text-slate-800">{{tutorialInfo.author}}</p>
+        <p class="text-xs text-slate-500">Hace 6 hrs.</p>
+      </div>
+    </div>
+    <hr class="h-[1px] bg-slate-400 rounded-full mt-3 mb-3">
+    <p class="font-semibold text-xl text-slate-700">{{tutorialInfo.title}}</p>
+    <p class="font-normal text-sm text-slate-600">{{tutorialInfo.description}}</p>
+  </div>
+
+  <div class="w-11/12 bg-white p-2 rounded-md">
+    <div class="flex flex-row items-center space-x-3">
+      <img class="h-14 rounded-full" src="assets/images/profile/ISC_profile.jpg" alt="Imagen de perfil">
+      <div class="flex flex-col">
+        <p class="text-base font-medium text-slate-800">Coordinacion de la carrera de Ingenieria en Sistemas computacionales</p>
+        <p class="text-xs text-slate-500">Hace 3 min.</p>
+      </div>
+    </div>
+    <hr class="h-[1px] bg-slate-400 rounded-full mt-3 mb-3">
+    <p class="font-semibold text-xl text-slate-700">Sentencias condicionales</p>
+    <p class="font-normal text-sm text-slate-600 text-justify">Los tipos más conocidos de sentencias condicionales son el SI..ENTONCES (if..then), el SI..ENTONCES..SI NO (if..then..else) y el SEGÚN (case o switch), aunque también podríamos mencionar al manejo de excepciones como una alternativa más moderna para evitar el "anidamiento" de carne condicionales. <br>
+      Las sentencias condicionales constituyen, junto con los bucles, los pilares de la programación estructurada, y su uso es una evolución de una sentencia en lenguaje ensamblador que ejecutaba la siguiente línea o no en función del valor de una condición.
+      <br><br>
+      Si bien es un problema que este anidamiento puede llegar a ser muy grande, la principal razón para utilizar el lanzamiento de errores es que con el tipo de estructura anterior se pierde la noción del camino principal, y cuesta mucho más encontrar las sentencias de ejecución normal, (en este caso Cuerpo), por la presencia de las condiciones de error que entorpecen la legibilidad.
+      Algunos lenguajes como Java han tenido esto en cuenta y desarrollaron el lanzamiento de errores, que consiste en separar el tratamiento de errores al final de la instrucción, para no perder de vista el hilo de continuidad.
+      <br>Para esto, los métodos en lugar de devolver un valor lógico (verdadero o falso) para determinar si la operación se efectuó correctamente, deben "lanzar" excepciones.
+    </p>
+    <hr class="h-[1px] bg-slate-400 rounded-full mt-3 mb-3">
+    <div class="flex flex-row items-center space-x-2 hover:cursor-pointer">
+      <i class="fa-solid fa-file-pdf text-red-500"></i>
+      <p class="font-medium text-Secondary-Blue">sentenciasCondicionales.pdf</p>
+      <p class="text-xs text-slate-400">2.2 mb</p>
+    </div>
+    <div class="flex flex-row items-center space-x-2 hover:cursor-pointer">
+      <i class="fa-solid fa-clapperboard text-blue-500"></i>
+      <p class="font-medium text-Secondary-Blue">Ejercicio de Programación ,Sentencia Condiciona.mp4</p>
+      <p class="text-xs text-slate-400">36.4 mb</p>
+    </div>
+  </div>
+
+
+</div>
