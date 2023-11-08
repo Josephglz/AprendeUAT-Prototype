@@ -6,6 +6,7 @@ import { WorkshopsPageComponent } from './workshops/pages/workshops-page/worksho
 import { TutorialsPageComponent } from './tutorial/pages/tutorials-page/tutorials-page.component';
 import { WorkshopDetailsComponent } from './workshops/pages/workshop-details/workshop-details.component';
 import { TutorialsDetailsComponent } from './tutorial/pages/tutorials-details/tutorials-details.component';
+import { TeacherPagesComponent } from './teacher/pages/teacher-pages/teacher-pages.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'talleres/:id', component: WorkshopDetailsComponent },
   { path: 'tutorias', component: TutorialsPageComponent },
   { path: 'tutorias/:id', component: TutorialsDetailsComponent },
+  { path: 'asesores', component: TeacherPagesComponent },
 ];
 
 @NgModule({
