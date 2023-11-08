@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { TutorialModule } from './tutorial/tutorial.module';
+import { TeacherModule } from './teacher/teacher.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { TutorialModule } from './tutorial/tutorial.module';
     SharedModule,
     WorkshopsModule,
     TutorialModule,
+    TeacherModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
